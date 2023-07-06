@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MAIN</title>
+    <link rel = "icon" href ="assets/bb1.png"
+        type = "image/x-icon">
+
+    <link rel="stylesheet" href="assets/main.css">
+
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="assets/bb1.png" alt="logo">
+        </div>
+        <div class="icon">
+          <!-- <span class="toggle">☰</span> -->
+        </div>
+        <h1 id="title">Basketball At It's Best</h1>
+        <ul class="list-item">
+          <li><a href="/main">Home</a></li>
+          <li><a href="/contact">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+  <body>
+    <h1> About Us</h1>
+    <p>This is about us</p>
+    
+    
+    <script>
+      $('.toggle').click(function () {
+        "use strict";
+        $('nav ul').slideToggle();
+    });
+    
+    
+    
+    $(window).resize(function () {
+        "use strict";
+        if ($(window).width() > 780) {
+            $('nav ul').removeAttr('style');
+        }
+    });
+    </script>
+  </body>
+  <footer>
+    <div class="footer">
+      <p>© 2021 Basketball At It's Best By Sagol</p>
+    </div>
+</html>

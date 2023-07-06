@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the admin portal
+
+    </title>
+    <link rel="stylesheet" href="assets/welcome.css">
+    <style>
+        table{
+           border: 1px solid black;
+            width: 100%;
+            color: #588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Portal </h1><br>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Start_time</th>
+            <th>End_time</th>
+            <th>court_type</th>
+            <th>court_location</th>
+            <th>Status</th>
+        </tr>
+        <% if(show.length > 0){ %>
+            <% for(var i=0; i<show.length; i++){ %>
+                <tr>
+                    <td><%= show[i].id %></td>
+                    <td><%= show[i].Start_time %></td>
+                    <td><%= show[i].End_time %></td>
+                    <td><%= show[i].court_type %></td>
+                    <td><%= show[i].court_location %></td>
+                    <td>
+                        <a href="/update?id=<%= show[i].id %>">Update</a>
+                        <a href="/delete?id=<%= show[i].id %>">Delete</a>
+                    </td>
+                </tr>
+            <% } %>
+
+        <% }else{ %>
+            <h1>no </h1>
+
+        <% } %>
+    </table>
+</body>
+</html>

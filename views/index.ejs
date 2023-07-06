@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login In System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background:#3498db;
+            margin: 0 auto 0 auto;  
+            width:100%; 
+            text-align:center;
+            margin: 20px 0px 20px 0px;   
+          }
+          
+          p{
+            font-size:12px;
+            text-decoration: none;
+            color:#000000;
+          }
+          
+          h1{
+            font-size:1.5em;
+            color:#525252;
+          }
+          
+          .box{
+            left: 50%;
+            top: 50%;
+            margin-left: -25%;
+            margin-top: -25%;
+            background:white;
+            width:300px;
+            border-radius:6px;
+            margin: 0 auto 0 auto;
+            padding:0px 0px 70px 0px;
+            border: #2980b9 4px solid; 
+          }
+          
+          .input-field1{
+            background:#ecf0f1;
+            border: #ccc 1px solid;
+            border-bottom: #ccc 2px solid;
+            padding: 8px;
+            width:250px;
+            color:#AAAAAA;
+            margin-top:10px;
+            font-size:1em;
+            border-radius:4px;
+          }
+          
+          .input-field2{
+            border-radius:4px;
+            background:#ecf0f1;
+            border: #ccc 1px solid;
+            padding: 8px;
+            width:250px;
+            font-size:1em;
+          }
+          
+          .btn{
+            background:#2ecc71;
+            width: 270px;
+            padding-top:5px;
+            padding-bottom:5px;
+            color:white;
+            border-radius:4px;
+            border: #27ae60 1px solid;
+            
+            margin-top:20px;
+            margin-bottom:20px;
+            float:left;
+            margin-left:16px;
+            margin-right: 16px;
+            font-weight:800;
+            font-size:0.8em;
+          }
+          
+          .btn:hover{
+            background:#2CC06B; 
+          }
+    </style>
+</head>
+<body>
+  <div class="b">
+    <section class="box">
+        <div class="design">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="form">
+            <h2>User Login</h2>
+            <form action="/" method="POST">
+                <input type="email" name="username" class="input-field1" placeholder="Username" />
+                <input type="password" name="password" class="input-field2" placeholder="Password" />
+                <input type="submit" class="btn" value="Login">
+                <div class="message">
+                    <p>Not registered? <a href="/register">Create an account</a>
+                      <br>
+                    </p>
+                </div>
+            </form>
+
+        </div>
+    </section>
+  </div>  
+  <script>
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+   
+    <style>
+        table{
+           border: 1px solid black;
+            width: 100%;
+            color: #588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+        input{
+            width: 50%;
+            height: 30px;
+            margin: 10px;
+        }
+        #e{
+            width: 50%;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome user </h1><br>
+    <form action="/welcome" method="POST">
+        <input type="text" name="court_type" placeholder="court_type" required>
+        <input type="text" name="court_location" placeholder="court_location" required>
+        <input type="datetime-local" name="available_time" placeholder="available_time" required>
+        <button type="submit">Submit</button>
+
+    </form>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>available_time</th>
+            <th>court_type</th>
+            <th>court_location</th>
+            <th>action</th>
+        </tr>
+         <% if(timetable.length > 0){ %>
+            <% for(var i=0; i<timetable.length; i++){ %>
+                <tr>
+                    <td><%= timetable[i].id %></td>
+                    <td><%= timetable[i].available_time %></td>
+                    <td><%= timetable[i].court_type %></td>
+                    <td><%= timetable[i].court_location %></td>
+                </tr>
+            <% } %>
+
+        <% }else{ %>
+            <h1>no </h1>
+
+        <% } %>
+    </table>
+    
+</body>
+</html>
